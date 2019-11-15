@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "SignatureRecente";
+}
+<h1>Signature la plus recente</h1>
+@if ((int)ViewData["id"] == -1 || (int)ViewData["id"] == 99)
+{
+    <p>Il n'y a pas de signature recente.</p>
+}
+else
+{
+    <p>Signature la plus recente:</p>
+        <table style="width:100%">
+            <tr>
+                <th>id</th>
+                <th>nom de famille</th>
+                <th>nom de ville</th>
+            </tr>
+            <tr>
+                <td>@ViewData["id"]</td>
+                <td>@ViewData["nomDeFamille"]</td>
+                <td>@ViewData["villeEquipe"]</td>
+            </tr>
+        </table>
+}
